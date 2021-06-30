@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Held_Item.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Held_Item.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/InventoryManager.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Hot_Bar.tscn" type="PackedScene" id=4]
+
+[node name="InventoryManager" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -120.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer"]
+margin_left = 800.0
+margin_top = 390.0
+margin_right = 800.0
+margin_bottom = 390.0
+
+[node name="Hot_Bar_Container" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 734.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Hot_Bar" parent="Hot_Bar_Container" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 592.0
+margin_top = 45.0
+margin_right = 1007.0
+margin_bottom = 121.0
+
+[node name="Held_Item" parent="." instance=ExtResource( 2 )]
+script = ExtResource( 1 )
