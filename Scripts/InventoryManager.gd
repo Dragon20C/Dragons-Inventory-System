@@ -19,8 +19,10 @@ var player_inventory : Array = [
 var item = [null]
 var current_inv
 var previous_slot : int
+var player : KinematicBody
 
 func _ready():
+	player = get_parent()
 	SignalBus.connect("ui_opened",get_parent(),"ui_opened")
 	SignalBus.connect("ui_closed",get_parent(),"ui_closed")
 	get_node("Hot_Bar_Container/Hot_Bar").ready_hot_bar()
@@ -39,10 +41,18 @@ func _process(delta):
 			if inventory_location.get_child(1) != null:
 				inventory_location.get_child(1).queue_free()
 			inventory_location.visible = false
-
+			
+	if Input.is_action_just_pressed("right_click"): # checks the raycast for chests
+		if player.raycast.is_colliding():
+			var object = player.raycast.get_collider()
+			if object.is_in_group("chest"):
+				object.get_parent().animation.play("Opening") # this needs to be better
+				open_inventory_with_chest(object.get_parent().inventory)
+				
 func open_inventory_with_chest(chest):
 	inventory_state = true
 	inventory_location.visible = true
+	SignalBus.emit_signal("ui_opened")
 	spawn_inventory(player_inventory)
 	spawn_inventory(chest)
 	

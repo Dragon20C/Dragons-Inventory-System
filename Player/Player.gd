@@ -46,10 +46,7 @@ func _process(delta):
 		camera.global_transform = head.global_transform
 		
 func _physics_process(delta):
-	if Input.is_action_just_pressed("Inventory"):
-		if raycast.is_colliding():
-			var object = raycast.get_collider()
-			
+		
 	#get keyboard input
 	direction = Vector3.ZERO
 	var h_rot = global_transform.basis.get_euler().y
@@ -81,6 +78,8 @@ func _physics_process(delta):
 func ui_opened():
 	menu_state = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	raycast.enabled = false
 func ui_closed():
 	menu_state = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	raycast.enabled = true
