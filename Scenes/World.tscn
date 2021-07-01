@@ -86,4 +86,7 @@ shape = SubResource( 6 )
 [node name="Chest" parent="Meshes" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.883369, -16 )
 
+[node name="Chest2" parent="Meshes" instance=ExtResource( 4 )]
+transform = Transform( 0.908552, 0, -0.417772, 0, 1, 0, 0.417772, 0, 0.908552, 9, -0.883369, -14.1236 )
+
 [node name="Player" parent="." instance=ExtResource( 3 )]

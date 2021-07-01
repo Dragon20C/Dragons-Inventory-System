@@ -46,7 +46,7 @@ func _process(delta):
 		if player.raycast.is_colliding():
 			var object = player.raycast.get_collider()
 			if object.is_in_group("chest"):
-				object.get_parent().animation.play("Opening") # this needs to be better
+				#object.get_parent().animation.play("Opening") # this needs to be better
 				open_inventory_with_chest(object.get_parent().inventory)
 				
 func open_inventory_with_chest(chest):
