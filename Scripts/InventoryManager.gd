@@ -9,9 +9,9 @@ var inventory_state : bool = false
 var player_inventory : Array = [
 	null,Item_Class.new(ItemData.item_dict["Cola"],5),null,null,null,
 	null,Item_Class.new(ItemData.item_dict["Cola"],32),null,Item_Class.new(ItemData.item_dict["Apple"],100),null,
-	Item_Class.new(ItemData.item_dict["Hammer"],5),null,null,null,null,
+	Item_Class.new(ItemData.item_dict["Hammer"],5),null,null,Item_Class.new(ItemData.item_dict["Apple"],53),null,
 	null,null,null,Item_Class.new(ItemData.item_dict["Sword"],5),null,
-	null,null,Item_Class.new(ItemData.item_dict["Pick"],5),null,null,
+	null,null,Item_Class.new(ItemData.item_dict["Pick"],5),null,Item_Class.new(ItemData.item_dict["Apple"],100),
 	null,Item_Class.new(ItemData.item_dict["Apple"],18),null,Item_Class.new(ItemData.item_dict["Spade"],5),null,
 	null,null,null,null,null,
 	null,

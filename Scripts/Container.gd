@@ -106,8 +106,35 @@ func swap_item(cur_inv,index):
 	inventory_manager.item[0] = saved
 	update_slot(inventory,index)
 
+func stack_items(cur_inv,index):
+	inventory_manager.item[0] = cur_inv[index]
+	cur_inv[index] = null
+	update_slot(inventory,index)
+	
+	for x in cur_inv.size():
+		if cur_inv[x] != null:
+			if cur_inv[x].name == inventory_manager.item[0].name:
+				var check_max = cur_inv[x].amount + inventory_manager.item[0].amount
+				if check_max > inventory_manager.item[0].max_amount: # Checks if max amount has reached
+					var left_amount = check_max - cur_inv[x].max_amount # Take whats left
+					cur_inv[x].amount = left_amount
+					inventory_manager.item[0].amount = inventory_manager.item[0].max_amount
+					update_slot(inventory,x)
+					inventory_manager.update_held_item()
+					
+				elif check_max <= cur_inv[x].max_amount: # checks if its the same or less
+					inventory_manager.item[0].amount += cur_inv[x].amount
+					cur_inv[x] = null
+					update_slot(inventory,x)
+					inventory_manager.update_held_item()
+					
+	
 func slot_pressed(index): # Detects button presses with an index
-	if inventory_manager.item[0] == null and inventory[index] != null: # Picks up the item
+	if Input.is_key_pressed(KEY_SHIFT) and inventory_manager.item[0] == null and inventory[index] != null:
+		stack_items(inventory,index)
+		print("shift key is pressed")
+		
+	elif inventory_manager.item[0] == null and inventory[index] != null: # Picks up the item
 		pick_item(inventory,index)
 		
 	elif inventory_manager.item[0] != null and inventory[index] == null: # Drops the item
