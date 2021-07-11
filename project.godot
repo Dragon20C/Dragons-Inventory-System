@@ -24,6 +24,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Items/ItemData.gd"
 }, {
+"base": "Reference",
+"class": "Item_Recipes",
+"language": "GDScript",
+"path": "res://Items/Recipes/Item_recipe_class.gd"
+}, {
 "base": "Resource",
 "class": "Item_Resource",
 "language": "GDScript",
@@ -33,13 +38,20 @@ _global_script_classes=[ {
 "class": "Items",
 "language": "GDScript",
 "path": "res://Scripts/Item_Data.gd"
+}, {
+"base": "Reference",
+"class": "Recipes",
+"language": "GDScript",
+"path": "res://Items/Recipes/Recipes.gd"
 } ]
 _global_script_class_icons={
 "BaseItem": "",
 "Item_Class": "",
 "Item_Data": "",
+"Item_Recipes": "",
 "Item_Resource": "",
-"Items": ""
+"Items": "",
+"Recipes": ""
 }
 
 [application]

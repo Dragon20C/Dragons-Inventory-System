@@ -1,14 +1,15 @@
 extends CanvasLayer
 
 var inventory_shell = preload("res://Scenes/Container.tscn") # Does not have a inventory attached
+var crafting_scene = preload("res://Scenes/CraftingContainer.tscn")
 onready var Held_Icon = get_node("Held_Item/Icon")
 onready var held_Amount = get_node("Held_Item/Icon/Amount")
 onready var inventory_location = get_node("CenterContainer/HBoxContainer")
 var inventory_state : bool = false
 
 var player_inventory : Array = [
-	null,Item_Class.new(ItemData.item_dict["Cola"],5),null,null,null,
-	null,Item_Class.new(ItemData.item_dict["Cola"],32),null,Item_Class.new(ItemData.item_dict["Apple"],100),null,
+	null,Item_Class.new(ItemData.item_dict["Cola"],5),Item_Class.new(ItemData.item_dict["Rock"],30),Item_Class.new(ItemData.item_dict["Wood"],15),null,
+	null,Item_Class.new(ItemData.item_dict["Rope"],32),null,Item_Class.new(ItemData.item_dict["Apple"],100),null,
 	Item_Class.new(ItemData.item_dict["Hammer"],5),null,null,Item_Class.new(ItemData.item_dict["Apple"],53),null,
 	null,null,null,Item_Class.new(ItemData.item_dict["Sword"],5),null,
 	null,null,Item_Class.new(ItemData.item_dict["Pick"],5),null,Item_Class.new(ItemData.item_dict["Apple"],100),
@@ -48,6 +49,9 @@ func _process(delta):
 			if object.is_in_group("chest"):
 				#object.get_parent().animation.play("Opening") # this needs to be better
 				open_inventory_with_chest(object.get_parent().inventory)
+			elif object.is_in_group("crafting"):
+				SignalBus.emit_signal("ui_opened")
+				spawn_crafting_scene()
 				
 func open_inventory_with_chest(chest):
 	inventory_state = true
@@ -55,7 +59,14 @@ func open_inventory_with_chest(chest):
 	SignalBus.emit_signal("ui_opened")
 	spawn_inventory(player_inventory)
 	spawn_inventory(chest)
-	
+
+func spawn_crafting_scene():
+	inventory_state = true
+	inventory_location.visible = true
+	spawn_inventory(player_inventory)
+	var instance = crafting_scene.instance()
+	inventory_location.add_child(instance)
+
 func update_held_item():
 	if item[0] != null:
 		Held_Icon.texture = item[0].icon

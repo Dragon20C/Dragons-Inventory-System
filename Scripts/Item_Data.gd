@@ -8,6 +8,9 @@ var hammer = preload("res://Items/hammer.tres")
 var cola = preload("res://Items/cola.tres")
 var axe = preload("res://Items/axe.tres")
 var apple = preload("res://Items/apple.tres")
+var wood = preload("res://Items/wood.tres")
+var rock = preload("res://Items/rock.tres")
+var rope = preload("res://Items/rope.tres")
 
 var item_dict = {
  "Cola" : cola,
@@ -16,5 +19,8 @@ var item_dict = {
  "Hammer" : hammer,
  "Axe" : axe,
  "Pick" : pick,
- "Apple" : apple
+ "Apple" : apple,
+"Rock" : rock,
+"Wood" : wood,
+"Rope" : rope
 } 

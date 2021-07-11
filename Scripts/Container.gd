@@ -132,7 +132,7 @@ func stack_items(cur_inv,index):
 func slot_pressed(index): # Detects button presses with an index
 	if Input.is_key_pressed(KEY_SHIFT) and inventory_manager.item[0] == null and inventory[index] != null:
 		stack_items(inventory,index)
-		print("shift key is pressed")
+
 		
 	elif inventory_manager.item[0] == null and inventory[index] != null: # Picks up the item
 		pick_item(inventory,index)

@@ -1,0 +1,109 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Textures/Container_Background.png" type="Texture" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Font/Font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Textures/Container_Slot.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Crafting_Slot.gd" type="Script" id=5]
+[ext_resource path="res://Textures/Container_Slot_Selected.png" type="Texture" id=6]
+
+[node name="Crafting_Slot" type="CenterContainer"]
+margin_right = 500.0
+margin_bottom = 50.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_right = 500.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 500, 50 )
+texture = ExtResource( 1 )
+patch_margin_left = 15
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 15
+
+[node name="Material_1" type="Sprite" parent="NinePatchRect"]
+position = Vector2( 40, 24.9873 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="amount" type="Label" parent="NinePatchRect/Material_1"]
+margin_top = 17.2357
+margin_right = 40.0
+margin_bottom = 31.2357
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Material_2" type="Sprite" parent="NinePatchRect"]
+position = Vector2( 120, 24.9873 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="amount" type="Label" parent="NinePatchRect/Material_2"]
+margin_left = 3.85635
+margin_top = 17.2357
+margin_right = 43.8564
+margin_bottom = 31.2357
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Material_3" type="Sprite" parent="NinePatchRect"]
+position = Vector2( 200, 24.9873 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="amount" type="Label" parent="NinePatchRect/Material_3"]
+margin_left = 2.85129
+margin_top = 15.9099
+margin_right = 42.8513
+margin_bottom = 29.9099
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Item_Name" type="Label" parent="NinePatchRect"]
+margin_left = 269.5
+margin_top = 10.4873
+margin_right = 320.5
+margin_bottom = 23.4873
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Item_Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Craft_Button" type="TextureButton" parent="NinePatchRect"]
+margin_left = 396.0
+margin_top = -6.92957
+margin_right = 460.0
+margin_bottom = 57.0704
+action_mode = 0
+texture_normal = ExtResource( 4 )
+texture_focused = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Item_Icon" type="Sprite" parent="NinePatchRect/Craft_Button"]
+position = Vector2( 32, 32 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 2 )
+
+[node name="Control" type="Control" parent="."]
+margin_left = 250.0
+margin_top = 25.0
+margin_right = 250.0
+margin_bottom = 25.0
