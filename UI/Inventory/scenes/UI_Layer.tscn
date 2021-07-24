@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/Inventory/scenes/Hand_slot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/Inventory/Scripts/UI_Layer.gd" type="Script" id=3]
+
+[node name="UI_Layer" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="Hand_slot" parent="." instance=ExtResource( 2 )]
+z_index = 100

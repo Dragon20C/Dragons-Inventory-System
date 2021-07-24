@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/rock.png-935847d28961e9d2541888aab0d7d27a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
+source_file="res://UI/Inventory/Items/Textures/rock.png"
+dest_files=[ "res://.import/rock.png-935847d28961e9d2541888aab0d7d27a.stex" ]
 
 [params]
 

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://UI/Inventory/Items/Item_Misc.gd" type="Script" id=1]
+[ext_resource path="res://UI/Inventory/Items/Textures/Coco Beans.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+id = 1
+name = "Coco Beans"
+image = ExtResource( 2 )
+type = 3
+max_stack = 99
+description = "A bean grown from a plant!"
+can_craft = false
+result_amount = 0
+ingredients = [  ]

@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://Scenes/InventoryManager.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
 height = 2.99438
@@ -36,5 +35,3 @@ far = 500.0
 enabled = true
 cast_to = Vector3( 0, 0, -35 )
 collide_with_areas = true
-
-[node name="InventoryManager" parent="." instance=ExtResource( 2 )]

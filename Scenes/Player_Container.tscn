@@ -1,0 +1,252 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://UI/Inventory/scenes/Slot.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Player_Container.gd" type="Script" id=2]
+[ext_resource path="res://UI/Inventory/scenes/BasicCraftingContainer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/Inventory/Scripts/MainInventoryStation.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UI/Inventory/Textures/Slot.png" type="Texture" id=5]
+
+[node name="Player_Container" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 578.467
+margin_top = 33.5078
+margin_right = 1378.47
+margin_bottom = 933.508
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BasicCraftingContainer" parent="." instance=ExtResource( 3 )]
+margin_left = 871.609
+margin_top = 115.114
+margin_right = -648.391
+margin_bottom = 515.114
+mouse_filter = 1
+
+[node name="Grid" type="GridContainer" parent="."]
+anchor_right = 1.0
+margin_left = 626.0
+margin_top = 568.865
+margin_right = -626.0
+margin_bottom = 900.865
+columns = 8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot" parent="Grid" instance=ExtResource( 1 )]
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot2" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 84.0
+margin_right = 164.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot3" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 168.0
+margin_right = 248.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot4" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 252.0
+margin_right = 332.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot5" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 336.0
+margin_right = 416.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot6" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 420.0
+margin_right = 500.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot7" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 504.0
+margin_right = 584.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot8" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 588.0
+margin_right = 668.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot9" parent="Grid" instance=ExtResource( 1 )]
+margin_top = 84.0
+margin_bottom = 164.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot10" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 84.0
+margin_top = 84.0
+margin_right = 164.0
+margin_bottom = 164.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot11" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 168.0
+margin_top = 84.0
+margin_right = 248.0
+margin_bottom = 164.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot12" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 252.0
+margin_top = 84.0
+margin_right = 332.0
+margin_bottom = 164.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot13" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 336.0
+margin_top = 84.0
+margin_right = 416.0
+margin_bottom = 164.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot14" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 420.0
+margin_top = 84.0
+margin_right = 500.0
+margin_bottom = 164.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot15" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 504.0
+margin_top = 84.0
+margin_right = 584.0
+margin_bottom = 164.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot16" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 588.0
+margin_top = 84.0
+margin_right = 668.0
+margin_bottom = 164.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot17" parent="Grid" instance=ExtResource( 1 )]
+margin_top = 168.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot18" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 84.0
+margin_top = 168.0
+margin_right = 164.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot19" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 168.0
+margin_top = 168.0
+margin_right = 248.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot20" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 252.0
+margin_top = 168.0
+margin_right = 332.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot21" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 336.0
+margin_top = 168.0
+margin_right = 416.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot22" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 420.0
+margin_top = 168.0
+margin_right = 500.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot23" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 504.0
+margin_top = 168.0
+margin_right = 584.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot24" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 588.0
+margin_top = 168.0
+margin_right = 668.0
+margin_bottom = 248.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot25" parent="Grid" instance=ExtResource( 1 )]
+margin_top = 252.0
+margin_bottom = 332.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot26" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 84.0
+margin_top = 252.0
+margin_right = 164.0
+margin_bottom = 332.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot27" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 168.0
+margin_top = 252.0
+margin_right = 248.0
+margin_bottom = 332.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot28" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 252.0
+margin_top = 252.0
+margin_right = 332.0
+margin_bottom = 332.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot29" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 336.0
+margin_top = 252.0
+margin_right = 416.0
+margin_bottom = 332.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot30" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 420.0
+margin_top = 252.0
+margin_right = 500.0
+margin_bottom = 332.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot31" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 504.0
+margin_top = 252.0
+margin_right = 584.0
+margin_bottom = 332.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="Slot32" parent="Grid" instance=ExtResource( 1 )]
+margin_left = 588.0
+margin_top = 252.0
+margin_right = 668.0
+margin_bottom = 332.0
+rect_min_size = Vector2( 80, 80 )
+
+[node name="MainInventoryStation" parent="." instance=ExtResource( 4 )]
+margin_left = 610.713
+margin_top = 51.0
+margin_right = 554.713
+margin_bottom = 66.08
+mouse_filter = 1
